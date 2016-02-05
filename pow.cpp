@@ -1,3 +1,14 @@
+/*
+        Math library
+
+  Power function inplementation 
+  Overloading in order:
+    -float
+    -double
+
+*/
+
+
 #include "math.h"
 
 
@@ -19,34 +30,4 @@ double math::pow(double base, int exponent)
 	return 1/math::pow(base, abs(exponent));
     else
 	return base*math::pow(base, --exponent);
-}
-
-int math::abs(int x)
-{
-    if (x == 0)
-	return 0;
-    else if (x > 0)
-	return x;
-    else
-	return -x;
-}
-
-float abs(float x)
-{
-    if (x == 0)
-	return 0;
-    else if (x > 0)
-	return x;
-    else
-	return -x;
-}
-
-double abs(double x)
-{
-    if (x == 0)
-	return 0;
-    else if (x > 0)
-	return x;
-    else
-	return -x;
 }
