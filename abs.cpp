@@ -23,7 +23,7 @@ int math::abs(int x)
 	return -x;
 }
 
-float abs(float x)
+float math::abs(float x)
 {
     if (x == 0)
 	return 0;
@@ -33,7 +33,7 @@ float abs(float x)
 	return -x;
 }
 
-double abs(double x)
+double math::abs(double x)
 {
     if (x == 0)
 	return 0;
