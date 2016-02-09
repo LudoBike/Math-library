@@ -14,7 +14,6 @@
 
 namespace
 {
-    // For float implementation
     inline float f(float square, float guess)
     {
         return math::pow(guess, 2) - square;
@@ -26,22 +25,6 @@ namespace
     }
 
     inline bool isCloseEnough(float a, float b)
-    {
-        return math::abs(a - b) > math::abs(b*0.0001);
-    }
-    
-    // For double implementation
-    inline double f(double square, double guess)
-    {
-        return math::pow(guess, 2) - square;
-    }
-
-    inline double fPrime(double guess)
-    {
-	return 2*guess;
-    }
-
-    inline bool isCloseEnough(double a, double b)
     {
         return math::abs(a - b) > math::abs(b*0.0001);
     }
@@ -58,6 +41,25 @@ float math::sqrt(float square)
     }
 
     return new_guess;
+}
+
+
+namespace
+{
+    inline double f(double square, double guess)
+    {
+        return math::pow(guess, 2) - square;
+    }
+
+    inline double fPrime(double guess)
+    {
+	return 2*guess;
+    }
+
+    inline bool isCloseEnough(double a, double b)
+    {
+        return math::abs(a - b) > math::abs(b*0.0001);
+    }
 }
 
 double math::sqrt(double square)
