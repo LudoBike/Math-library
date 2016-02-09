@@ -71,15 +71,19 @@ namespace
 
 double math::sqrt(double square)
 {
-    if (square < 0)
+    if (!square)
+	return square;
+    else if (square < 0)
 	throw std::domain_error("Root of negative number doesn't exist");
-    double guess = 1;
-    double new_guess = guess - f(square, guess)/fPrime(guess);
-    while (isCloseEnough(new_guess, guess))
+    else
     {
-	guess = new_guess;
-	new_guess = guess - f(square, guess)/fPrime(guess);
+	double guess = 1;
+	double new_guess = guess - f(square, guess)/fPrime(guess);
+	while (isCloseEnough(new_guess, guess))
+	{
+	    guess = new_guess;
+	    new_guess = guess - f(square, guess)/fPrime(guess);
+	}
+	return new_guess;
     }
-
-    return new_guess;
 }
