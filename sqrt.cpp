@@ -10,6 +10,7 @@
 
 
 #include "math.h"
+#include <stdexcept>
 
 
 namespace
@@ -32,15 +33,21 @@ namespace
 
 float math::sqrt(float square)
 {
-    float guess = 1;
-    float new_guess = guess - f(square, guess)/fPrime(guess);
-    while (isCloseEnough(new_guess, guess))
+    if (!square)
+	return square;
+    else if (square < 0)
+	throw std::domain_error("Root of negative number doesn't exist");
+    else
     {
-	guess = new_guess;
-	new_guess = guess - f(square, guess)/fPrime(guess);
+	float guess = 1;
+	float new_guess = guess - f(square, guess)/fPrime(guess);
+	while (isCloseEnough(new_guess, guess))
+	{
+	    guess = new_guess;
+	    new_guess = guess - f(square, guess)/fPrime(guess);
+	}
+	return new_guess;
     }
-
-    return new_guess;
 }
 
 
@@ -64,6 +71,8 @@ namespace
 
 double math::sqrt(double square)
 {
+    if (square < 0)
+	throw std::domain_error("Root of negative number doesn't exist");
     double guess = 1;
     double new_guess = guess - f(square, guess)/fPrime(guess);
     while (isCloseEnough(new_guess, guess))
