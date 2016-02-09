@@ -1,5 +1,6 @@
 *~
 executable
+*.o
 Makefile
 main.cpp
 \#*
