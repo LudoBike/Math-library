@@ -10,7 +10,7 @@
 */
 
 
-#include "math.h"
+#include <libmath/math.h>
 
 
 int math::abs(int x)

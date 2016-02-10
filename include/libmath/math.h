@@ -5,7 +5,7 @@
 namespace math
 {
     float  pow(float  base, int exponent);
-    double pow(double bas,  int exponent);
+    double pow(double base,  int exponent);
     float  sqrt(float x);
     double sqrt(double x);
     int    abs(int    x);

@@ -9,7 +9,7 @@
 */
 
 
-#include "math.h"
+#include <libmath/math.h>
 #include <stdexcept>
 
 

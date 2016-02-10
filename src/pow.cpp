@@ -9,7 +9,7 @@
 */
 
 
-#include "math.h"
+#include <libmath/math.h>
 
 
 float math::pow(float base, int exponent)

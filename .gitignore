@@ -1,6 +1,14 @@
-*~
-executable
-*.o
+# CMake user files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
 Makefile
-main.cpp
-\#*
+
+# Test directory
+test/
+
+# Build directory
+lib/
+
+# All emacs autosave files
+**/*~
