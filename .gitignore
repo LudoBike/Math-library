@@ -12,3 +12,4 @@ lib/
 
 # All emacs autosave files
 **/*~
+**/\#*\#
