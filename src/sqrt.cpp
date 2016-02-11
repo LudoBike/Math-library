@@ -31,7 +31,7 @@ namespace
     }
 }
 
-float math::sqrt(float square)
+float math::sqrt(float x)
 {
     if (!square)
 	return square;
@@ -69,7 +69,7 @@ namespace
     }
 }
 
-double math::sqrt(double square)
+double math::sqrt(double x)
 {
     if (!square)
 	return square;
