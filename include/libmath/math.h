@@ -21,6 +21,9 @@ namespace math
     double abs(double x);
     
     int pgcd(int x, int y);
+
+    float  extract_decimal(float  const x);
+    double extract_decimal(double const x);
 }
 
 
