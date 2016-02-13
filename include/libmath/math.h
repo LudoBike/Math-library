@@ -7,8 +7,8 @@ namespace math
     float  pow(float  base,  int exponent);
     double pow(double base,  int exponent);
     
-    float  sqrt(float  square);
-    double sqrt(double square);
+    float  sqrt(float  const square);
+    double sqrt(double const square);
 
     float  cbrt(float  const cube);
     double cbrt(double const cube);

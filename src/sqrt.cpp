@@ -15,23 +15,23 @@
 
 namespace
 {
-    inline float f(float square, float guess)
+    inline float f(float const square, float const guess)
     {
         return math::pow(guess, 2) - square;
     }
 
-    inline float fPrime(float guess)
+    inline float fPrime(float const guess)
     {
 	return 2*guess;
     }
 
-    inline bool isCloseEnough(float a, float b)
+    inline bool isCloseEnough(float const a, float const b)
     {
         return math::abs(a - b) < math::abs(b*0.0001);
     }
 }
 
-float math::sqrt(float square)
+float math::sqrt(float const square)
 {
     if (!square)
 	return square;
@@ -53,23 +53,23 @@ float math::sqrt(float square)
 
 namespace
 {
-    inline double f(double square, double guess)
+    inline double f(double const square, double const guess)
     {
         return math::pow(guess, 2) - square;
     }
 
-    inline double fPrime(double guess)
+    inline double fPrime(double const guess)
     {
 	return 2*guess;
     }
 
-    inline bool isCloseEnough(double a, double b)
+    inline bool isCloseEnough(double const a, double const b)
     {
         return math::abs(a - b) < math::abs(b*0.0001);
     }
 }
 
-double math::sqrt(double square)
+double math::sqrt(double const square)
 {
     if (!square)
 	return square;
