@@ -12,7 +12,7 @@
 #include <libmath/math.h>
 
 
-float math::pow(float base, int exponent)
+float math::pow(float const base, int const exponent)
 {
     if (exponent == 0)
 	return 1;
@@ -22,7 +22,7 @@ float math::pow(float base, int exponent)
 	return base*math::pow(base, --exponent);
 }
 
-double math::pow(double base, int exponent)
+double math::pow(double const base, int const exponent)
 {
     if (exponent == 0)
 	return 1;

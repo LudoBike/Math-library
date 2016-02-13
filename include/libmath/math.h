@@ -4,8 +4,8 @@
 
 namespace math
 {
-    float  pow(float  base,  int exponent);
-    double pow(double base,  int exponent);
+    float  pow(float  const base,  int const exponent);
+    double pow(double const base,  int const exponent);
     
     float  sqrt(float  const square);
     double sqrt(double const square);
