@@ -13,8 +13,8 @@ namespace math
     float  cbrt(float  const cube);
     double cbrt(double const cube);
     
-    float  hypot(float  x, float  y);
-    double hypot(double x, double y);
+    float  hypot(float  const x, float  const y);
+    double hypot(double const x, double const y);
     
     int    abs(int    const x);
     float  abs(float  const x);

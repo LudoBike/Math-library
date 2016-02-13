@@ -10,12 +10,12 @@
 
 #include <libmath/math.h>
 
-float math::hypot(float x, float y)
+float math::hypot(float const x, float const y)
 {
     return math::sqrt(x*x + y*y);
 }
 
-double math::hypot(double x, double y)
+double math::hypot(double const x, double const y)
 {
     return math::sqrt(x*x + y*y);
 }
