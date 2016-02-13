@@ -10,8 +10,8 @@ namespace math
     float  sqrt(float  square);
     double sqrt(double square);
 
-    float  cbrt(float  cube);
-    double cbrt(double cube);
+    float  cbrt(float  const cube);
+    double cbrt(double const cube);
     
     float  hypot(float  x, float  y);
     double hypot(double x, double y);

@@ -12,23 +12,23 @@
 
 namespace
 {
-    inline float f(float cube, float guess)
+    inline float f(float const cube, float const guess) 
     {
 	return math::pow(guess, 3) - cube;
     }
 
-    inline float fPrime(float guess)
+    inline float fPrime(float const guess)
     {
 	return 3*(math::pow(guess, 2));
     }
 
-    inline bool isCloseEnought(float a, float b)
+    inline bool isCloseEnought(float const a, float const b)
     {
 	return math::abs(a - b) < math::abs(b*0.0001); 
     }
 }
 
-float math::cbrt(float cube)
+float math::cbrt(float const cube)
 {
     if (!cube || math::abs(cube) == 1)
 	return cube;
@@ -48,23 +48,23 @@ float math::cbrt(float cube)
 
 namespace
 {
-    inline double f(double cube, double guess)
+    inline double f(double const cube, double const guess)
     {
 	return math::pow(guess, 3) - cube;
     }
 
-    inline double fPrime(double guess)
+    inline double fPrime(double const guess)
     {
 	return 3*(math::pow(guess, 2));
     }
 
-    inline bool isCloseEnought(double a, double b)
+    inline bool isCloseEnought(double const a, double const b)
     {
 	return math::abs(a - b) < math::abs(b*0.0001); 
     }
 }
 
-double math::cbrt(double cube)
+double math::cbrt(double const cube)
 {
     if (!cube || math::abs(cube) == 1)
 	return cube;
