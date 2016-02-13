@@ -1,7 +1,7 @@
 /*
         Math library
 
-  PGCD function inplementation 
+  PGCD function implementation 
   Overloading in order:
     -int
 

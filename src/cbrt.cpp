@@ -1,7 +1,7 @@
 /*
         Math library
 
-  Absolute value function inplementation 
+  Absolute value function implementation 
   Overloading in order:
     -float
     -double

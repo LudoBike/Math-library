@@ -1,7 +1,7 @@
 /*
         Math library
 
-  Hypothenuse with Pythagore function inplementation 
+  Hypothenuse with Pythagoras' theorem function implementation 
   Overloading in order:
     -float
     -double

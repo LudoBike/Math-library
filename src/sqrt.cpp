@@ -1,7 +1,7 @@
 /*
         Math library
 
-  Sqare root function inplementation 
+  Square root function implementation 
   Overloading in order:
     -float
     -double

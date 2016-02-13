@@ -1,7 +1,7 @@
 /*
         Math library
 
-  Power function inplementation 
+  Power function implementation 
   Overloading in order:
     -float
     -double
