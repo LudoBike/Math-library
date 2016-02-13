@@ -4,6 +4,10 @@
 
 namespace math
 {
+    // Classes
+    class Fract;
+
+    // Functions
     float  pow(float  const base,  int const exponent);
     double pow(double const base,  int const exponent);
     
