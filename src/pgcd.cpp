@@ -11,7 +11,7 @@
 #include <libmath/math.h>
 
 
-int math::pgcd(int x, int y)
+int math::pgcd(int const x, int const y)
 {
     if (!y)
 	return x;

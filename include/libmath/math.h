@@ -20,7 +20,7 @@ namespace math
     float  abs(float  const x);
     double abs(double const x);
     
-    int pgcd(int x, int y);
+    int pgcd(int const x, int const y);
 
     float  extract_decimal(float  const x);
     double extract_decimal(double const x);
