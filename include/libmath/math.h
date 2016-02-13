@@ -4,18 +4,23 @@
 
 namespace math
 {
-    float  pow(float  base, int exponent);
+    float  pow(float  base,  int exponent);
     double pow(double base,  int exponent);
-    float  sqrt(float square);
+    
+    float  sqrt(float  square);
     double sqrt(double square);
-    float  cbrt(float cube);
+
+    float  cbrt(float  cube);
     double cbrt(double cube);
-    float  hypot(float x, float y);
+    
+    float  hypot(float  x, float  y);
     double hypot(double x, double y);
+    
     int    abs(int    x);
     float  abs(float  x);
     double abs(double x);
-    int    pgcd(int x, int y);
+    
+    int pgcd(int x, int y);
 }
 
 
