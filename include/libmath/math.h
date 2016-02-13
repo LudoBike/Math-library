@@ -16,9 +16,9 @@ namespace math
     float  hypot(float  x, float  y);
     double hypot(double x, double y);
     
-    int    abs(int    x);
-    float  abs(float  x);
-    double abs(double x);
+    int    abs(int    const x);
+    float  abs(float  const x);
+    double abs(double const x);
     
     int pgcd(int x, int y);
 

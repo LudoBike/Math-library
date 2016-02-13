@@ -13,7 +13,7 @@
 #include <libmath/math.h>
 
 
-int math::abs(int x)
+int math::abs(int const x)
 {
     if (x == 0)
 	return 0;
@@ -23,7 +23,7 @@ int math::abs(int x)
 	return -x;
 }
 
-float math::abs(float x)
+float math::abs(float const x)
 {
     if (x == 0)
 	return 0;
@@ -33,7 +33,7 @@ float math::abs(float x)
 	return -x;
 }
 
-double math::abs(double x)
+double math::abs(double const x)
 {
     if (x == 0)
 	return 0;
