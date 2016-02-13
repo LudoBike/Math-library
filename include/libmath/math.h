@@ -15,6 +15,7 @@ namespace math
     int    abs(int    x);
     float  abs(float  x);
     double abs(double x);
+    int    pgcd(int x, int y);
 }
 
 
