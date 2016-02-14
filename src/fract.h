@@ -19,7 +19,7 @@ class math::Fract
 public:
     Fract(int const numerator, int const denominator = 1);
     Fract(float numerator, float denominator = 1);
-
+    
 private:
     void manageSign();
     void reduce();
