@@ -8,13 +8,14 @@
 
 #include "fract.h"
 #include <stdexcept>
+#include <functional>
 
-math::Fract::Fract(int const numerator, int const denominator = 1)
+math::Fract::Fract(int const numerator, int const denominator)
     :
     d_numerator(numerator)
 {
     if (!denominator)
-	throw domain_error("The denominator can't be setting as a null value");
+	throw std::domain_error("The denominator can't be setting as a null value");
     else
 	d_denominator = denominator;
 
@@ -23,9 +24,10 @@ math::Fract::Fract(int const numerator, int const denominator = 1)
 }
 
 
-math::Fract::Fract(float numerator, float denominator = 1)
+math::Fract::Fract(float numerator, float denominator)
 {
-    auto is_integer = [](auto x) -> bool { return math::extract_decimal(x) == 0; };
+    std::function<bool(float)> is_integer = [](float x) -> bool {
+	return math::extract_decimal(x) == 0; };
     
     while (!is_integer(numerator) or !is_integer(denominator))
     {
@@ -48,7 +50,7 @@ void math::Fract::manageSign()
 	d_denominator = math::abs(d_denominator);
 	d_numerator   = math::abs(d_numerator);
     }
-    else if (denominator < 0)
+    else if (d_denominator < 0)
     {
 	d_denominator = math::abs(d_denominator);
 	d_numerator   = -d_numerator;
@@ -59,7 +61,7 @@ void math::Fract::manageSign()
 
 void math::Fract::reduce()
 {
-    pgcd = math::pgcd(d_numerator, d_denominator);
-    d_numerator /= pgcd;
-    d_denominator /= pgcd;
+    int divisor = math::pgcd(d_numerator, d_denominator);
+    d_numerator /= divisor;
+    d_denominator /= divisor;
 }
