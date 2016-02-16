@@ -23,14 +23,17 @@ namespace math
     
     template<typename T>
     std::enable_if_t<std::is_arithmetic<T>{}, T>
-    abs(T const x);
+	abs(T const x);
     
-    int pgcd(int const x, int const y);
+    template<typename T>
+    std::enable_if_t<std::is_integral<T>{}, T>
+	pgcd(T const x, T const y);
 
     float  extract_decimal(float  const x);
     double extract_decimal(double const x);
 }
 
 #include "../../src/abs.tpp"
+#include "../../src/pgcd.tpp"
 
 #endif
