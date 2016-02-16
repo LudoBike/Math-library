@@ -6,7 +6,6 @@
 */
 
 
-#include <libmath/math.h>
 #include <cassert>
 #include <type_traits>
 #include <limits>

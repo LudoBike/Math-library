@@ -31,5 +31,6 @@ namespace math
     double extract_decimal(double const x);
 }
 
+#include "../../src/abs.tpp"
 
 #endif
