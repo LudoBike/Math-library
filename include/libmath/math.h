@@ -1,6 +1,7 @@
 #ifndef __MATH_H__
 # define __MATH_H__
 
+#include <type_traits>
 
 namespace math
 {
@@ -20,9 +21,9 @@ namespace math
     float  hypot(float  const x, float  const y);
     double hypot(double const x, double const y);
     
-    int    abs(int    const x);
-    float  abs(float  const x);
-    double abs(double const x);
+    template<typename T>
+    std::enable_if_t<std::is_arithmetic<T>{}, T>
+    abs(T const x);
     
     int pgcd(int const x, int const y);
 

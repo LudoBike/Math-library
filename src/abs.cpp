@@ -2,43 +2,21 @@
         Math library
 
   Absolute value function implementation 
-  Overloading in order:
-    -int
-    -float
-    -double
 
 */
 
 
 #include <libmath/math.h>
+#include <cassert>
+#include <type_traits>
+#include <limits>
 
 
-int math::abs(int const x)
+template<typename T>
+std::enable_if_t<std::is_arithmetic<T>{}, T> 
+    math::abs(T const x)
 {
-    if (x == 0)
-	return 0;
-    else if (x > 0)
-	return x;
-    else
-	return -x;
-}
-
-float math::abs(float const x)
-{
-    if (x == 0)
-	return 0;
-    else if (x > 0)
-	return x;
-    else
-	return -x;
-}
-
-double math::abs(double const x)
-{
-    if (x == 0)
-	return 0;
-    else if (x > 0)
-	return x;
-    else
-	return -x;
+    assert((std::is_integral<T>::value) ? x > std::numeric_limits<T>::min() : true &&
+	    "abs: pre-cond: out of range parameter a");
+    return (x < 0) ? -x : x;
 }
