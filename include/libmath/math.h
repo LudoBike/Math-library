@@ -31,9 +31,14 @@ namespace math
 
     float  extract_decimal(float  const x);
     double extract_decimal(double const x);
+
+    template<typename T>
+    std::enable_if_t<std::is_floating_point<T>{}, T>
+	fmod(T numer, T denom);
 }
 
 #include "../../src/abs.tpp"
 #include "../../src/pgcd.tpp"
+#include "../../src/fmod.tpp"
 
 #endif
