@@ -5,9 +5,6 @@
 
 namespace math
 {
-    // Classes
-    class Fract;
-
     // Functions
     template<typename T>
     std::enable_if_t<std::is_arithmetic<T>{}, T>
