@@ -35,10 +35,15 @@ namespace math
     template<typename T>
     std::enable_if_t<std::is_floating_point<T>{}, T>
         fmod(T numer, T denom);
+
+    template<typename T>
+    std::enable_if_t<std::is_floating_point<T>{}, T>
+        exp(T const x);
 }
 
 #include "../../src/abs.tpp"
 #include "../../src/pgcd.tpp"
 #include "../../src/fmod.tpp"
+#include "../../src/exp.tpp"
 
 #endif
