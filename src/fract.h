@@ -28,7 +28,7 @@ public:
 
     void swap(Fract  &other);
     void swap(Fract &&tmp);
-    
+
 private:
     void manageSign();
     void reduce();

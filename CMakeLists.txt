@@ -14,7 +14,7 @@ include_directories(include)
 
 # Library declaration
 file(
-  
+
   GLOB_RECURSE
   source_files
   src/*

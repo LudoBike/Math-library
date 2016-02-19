@@ -1,7 +1,7 @@
 /*
         Math library
 
-  Square root function implementation 
+  Square root function implementation
   Overloading in order:
     -float
     -double
@@ -22,7 +22,7 @@ namespace
 
     inline float fPrime(float const guess)
     {
-	return 2*guess;
+        return 2*guess;
     }
 
     inline bool isCloseEnough(float const a, float const b)
@@ -34,19 +34,19 @@ namespace
 float math::sqrt(float const square)
 {
     if (!square)
-	return square;
+        return square;
     else if (square < 0)
-	throw std::domain_error("Root of negative number doesn't exist");
+        throw std::domain_error("Root of negative number doesn't exist");
     else
     {
-	float guess = 1;
-	float new_guess = guess - f(square, guess)/fPrime(guess);
-	while (not isCloseEnough(new_guess, guess))
-	{
-	    guess = new_guess;
-	    new_guess = guess - f(square, guess)/fPrime(guess);
-	}
-	return new_guess;
+        float guess = 1;
+        float new_guess = guess - f(square, guess)/fPrime(guess);
+        while (not isCloseEnough(new_guess, guess))
+        {
+            guess = new_guess;
+            new_guess = guess - f(square, guess)/fPrime(guess);
+        }
+        return new_guess;
     }
 }
 
@@ -60,7 +60,7 @@ namespace
 
     inline double fPrime(double const guess)
     {
-	return 2*guess;
+        return 2*guess;
     }
 
     inline bool isCloseEnough(double const a, double const b)
@@ -72,18 +72,18 @@ namespace
 double math::sqrt(double const square)
 {
     if (!square)
-	return square;
+        return square;
     else if (square < 0)
-	throw std::domain_error("Root of negative number doesn't exist");
+        throw std::domain_error("Root of negative number doesn't exist");
     else
     {
-	double guess = 1;
-	double new_guess = guess - f(square, guess)/fPrime(guess);
-	while (not isCloseEnough(new_guess, guess))
-	{
-	    guess = new_guess;
-	    new_guess = guess - f(square, guess)/fPrime(guess);
-	}
-	return new_guess;
+        double guess = 1;
+        double new_guess = guess - f(square, guess)/fPrime(guess);
+        while (not isCloseEnough(new_guess, guess))
+        {
+            guess = new_guess;
+            new_guess = guess - f(square, guess)/fPrime(guess);
+        }
+        return new_guess;
     }
 }
