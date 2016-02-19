@@ -9,8 +9,9 @@ namespace math
     class Fract;
 
     // Functions
-    float  pow(float  const base,  int const exponent);
-    double pow(double const base,  int const exponent);
+    template<typename T>
+    std::enable_if_t<std::is_arithmetic<T>{}, T>
+        pow(T const base, T const exponent);
 
     float  sqrt(float  const square);
     double sqrt(double const square);
@@ -41,6 +42,7 @@ namespace math
         exp(T const x);
 }
 
+#include "../../src/pow.tpp"
 #include "../../src/abs.tpp"
 #include "../../src/pgcd.tpp"
 #include "../../src/fmod.tpp"
