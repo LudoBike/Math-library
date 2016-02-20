@@ -12,7 +12,7 @@
 
 template<typename T>
 std::enable_if_t<std::is_arithmetic<T>{}, T>
-    pow(T const base, T const exponent)
+    math::pow(T const base, T const exponent)
 {
     assert((base == 0) ? exponent >= 0 : true &&
            "pow: zero can't be raised by negative value");

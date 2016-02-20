@@ -9,7 +9,7 @@
 
 template<typename T>
 std::enable_if_t<std::is_floating_point<T>{}, T>
-    exp(T const x)
+    math::exp(T const x)
 {
     T k;
     T x_pow_k = 1, fact_k = 1;
