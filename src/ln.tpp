@@ -17,13 +17,13 @@ std::enable_if_t<std::is_floating_point<T>{}, T>
     T const e = 2.718281; // Euler's number
     T n = 0;
 
-    while (math::pow(e, 100*n) < x)
+    while (math::pow<T>(e, 100*n) < x)
         n++;    
 
-    while (math::pow(e, 10*n++) < x)
+    while (math::pow<T>(e, 10*n++) < x)
         n++;    
 
-    while (math::pow(e, n++) < x)
+    while (math::pow<T>(e, n++) < x)
         n++;
 
     return n;
