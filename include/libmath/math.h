@@ -37,6 +37,10 @@ namespace math
     template<typename T>
     std::enable_if_t<std::is_floating_point<T>{}, T>
         exp(T const x);
+
+    template<typename T>
+    std::enable_if_t<std::is_floating_point<T>{}, T>
+        ln(T const x);
 }
 
 #include "../../src/pow.tpp"
@@ -44,5 +48,6 @@ namespace math
 #include "../../src/pgcd.tpp"
 #include "../../src/fmod.tpp"
 #include "../../src/exp.tpp"
+#include "../../src/ln.tpp"
 
 #endif
