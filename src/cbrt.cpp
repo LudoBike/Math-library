@@ -14,12 +14,12 @@ namespace
 {
     inline float f(float const cube, float const guess) 
     {
-        return math::pow(guess, 3) - cube;
+        return math::pow(guess, 3.0f) - cube;
     }
 
     inline float fPrime(float const guess)
     {
-        return 3*(math::pow(guess, 2));
+        return 3*(math::pow(guess, 2.0f));
     }
 
     inline bool isCloseEnought(float const a, float const b)
@@ -50,12 +50,12 @@ namespace
 {
     inline double f(double const cube, double const guess)
     {
-        return math::pow(guess, 3) - cube;
+        return math::pow(guess, 3.0) - cube;
     }
 
     inline double fPrime(double const guess)
     {
-        return 3*(math::pow(guess, 2));
+        return 3*(math::pow(guess, 2.0));
     }
 
     inline bool isCloseEnought(double const a, double const b)

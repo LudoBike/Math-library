@@ -17,7 +17,7 @@ namespace
 {
     inline float f(float const square, float const guess)
     {
-        return math::pow(guess, 2) - square;
+        return math::pow(guess, 2.0f) - square;
     }
 
     inline float fPrime(float const guess)
@@ -55,7 +55,7 @@ namespace
 {
     inline double f(double const square, double const guess)
     {
-        return math::pow(guess, 2) - square;
+        return math::pow(guess, 2.0) - square;
     }
 
     inline double fPrime(double const guess)
