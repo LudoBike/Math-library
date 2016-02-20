@@ -8,7 +8,7 @@
 
 */
 
-#include <libmath/math.h>
+#include <libmath/math.hpp>
 
 float math::hypot(float const x, float const y)
 {

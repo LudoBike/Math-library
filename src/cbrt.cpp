@@ -8,7 +8,9 @@
 
 */
 
-#include <libmath/math.h>
+
+#include <libmath/pow.hpp>
+#include <libmath/abs.hpp>
 
 namespace
 {

@@ -9,7 +9,8 @@
 */
 
 
-#include <libmath/math.h>
+#include <libmath/pow.h>
+#include <libmath/abs.h>
 #include <stdexcept>
 
 
