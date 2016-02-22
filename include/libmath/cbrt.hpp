@@ -38,7 +38,7 @@ namespace math
             return 3*math::pow<T>(guess, 2);
         };
         
-        auto isCloseEnought = [](T const a, T const b) -> T {
+        auto isCloseEnought = [](T const a, T const b) -> bool {
             return math::abs<T>(a - b) < math::abs<T>(b*0.0001);
         };
 
