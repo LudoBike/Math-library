@@ -17,7 +17,7 @@ namespace math
 {
     
     template<typename T>
-    std::enable_if_t<std::is_arithmetic<T>{}, T>
+    std::enable_if_t<std::is_integral<T>{}, T>
         pow(T const base, T const exp);
     
 }
@@ -35,10 +35,10 @@ namespace math
     {
         while (numer > denom * 10)
         {
-            unsigned int a{}, b{};
-            while (numer / math::pow<unsigned int>(10, a++) > 10);
-            while (numer / math::pow<unsigned int>(10, a) - ++b > 1);
-            numer -= math::pow<unsigned int>(10, a) * b;
+            T a{}, b{};
+            while (numer / math::pow<T>(10, a++) > 10);
+            while (numer / math::pow<T>(10, a) - ++b > 1);
+            numer -= math::pow<T>(10, a) * b;
         }
 
         while (numer > denom)
