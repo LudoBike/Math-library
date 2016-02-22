@@ -41,7 +41,7 @@ namespace math
         };
 
         auto isCloseEnough = [](T const a, T const b) -> bool {
-            return math::abs<T>(a - b) < math::abs<T>(b*0.0001)
+            return math::abs<T>(a - b) < math::abs<T>(b*0.0001);
         };
 
         if (square == 0 or square == 1)
