@@ -6,6 +6,10 @@
 */
 
 
+#ifndef __CBRT_HPP__
+#define __CBRT_HPP__
+
+
 #include <type_traits>
 #include <functional>
 
@@ -26,6 +30,7 @@ namespace math
 
 namespace math
 {
+    
     template<typename T>
     std::enable_if_t<std::is_floating_point<T>{}, T>
         cbrt(T const cube)
@@ -56,4 +61,8 @@ namespace math
             return new_guess;
         }
     }
+    
 }
+
+
+#endif // __CBRT_HPP__

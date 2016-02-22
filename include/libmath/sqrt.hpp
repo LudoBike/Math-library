@@ -6,6 +6,10 @@
 */
 
 
+#ifndef __SQRT_HPP__
+#define __SQRT_HPP__
+
+
 #include <type_traits>
 #include <functional>
 
@@ -26,6 +30,7 @@ namespace math
 
 namespace math
 {
+    
     template<typename T>
     std::enable_if_t<std::is_floating_point<T>{}, T>
         sqrt(T const square)
@@ -58,4 +63,8 @@ namespace math
             return new_guess;
         }
     }
+    
 }
+
+
+#endif // __SQRT_HPP__
