@@ -9,9 +9,20 @@
 #define __LN_HPP__
 
 
-#include "pow.hpp"
 #include <type_traits>
 #include <functional>
+
+
+namespace math
+{
+    
+    template<typename T>
+    std::enable_if_t<std::is_arithmetic<T>{}, T>
+        pow(T const base, T const exp);
+    
+}
+
+#include "pow.hpp"
 
 
 namespace math

@@ -9,7 +9,7 @@
 */
 
 
-#include <libmath/math.h>
+#include <libmath/math.hpp>
 
 
 float math::extract_decimal(float const x)

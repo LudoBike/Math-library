@@ -11,6 +11,17 @@
 
 
 #include <type_traits>
+
+
+namespace math
+{
+    
+    template<typename T>
+    std::enable_if_t<std::is_arithmetic<T>{}, T>
+        pow(T const base, T const exp);
+    
+}
+
 #include "pow.hpp"
 
 
