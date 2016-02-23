@@ -41,7 +41,7 @@ namespace math
             numer -= math::pow<T>(10, a) * b;
         }
 
-        while (numer > denom)
+        while (numer >= denom)
             numer -= denom;
 
         return numer;
