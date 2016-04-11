@@ -1,3 +1,3 @@
 # Math-library
 
-A mathematics library wich I code for train me in c++ and maths
+A mathematics library I code to train me in C++ and maths
